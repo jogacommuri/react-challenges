@@ -1,30 +1,5 @@
-
-
-// const Navbar = () => {
-//   return (
-//     <nav className="flex items-center justify-between bg-gray-800 text-white p-4">
-//       <Link to="/">
-//         <h1 className="text-3xl font-bold">SJC</h1>
-//       </Link>
-//       <ul className="flex space-x-4 flex-col">
-//         <li>
-//           <Link to="/fileExplorer">File Explorer Challenge</Link>
-//         </li>
-//         <li>
-//           <Link to="/contact">Contact</Link>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-
-'use client';
-
 import { Sidebar } from 'flowbite-react';
-import { HiInbox, HiShoppingCart } from 'react-icons/hi';
+import { FiFolder, FiShoppingCart, FiSearch } from 'react-icons/fi';
 import React from "react";
 import { Link } from "react-router-dom";
 function SidebarMenu() {
@@ -34,11 +9,14 @@ function SidebarMenu() {
       <Sidebar.Items>
         <Sidebar.ItemGroup>
          
-          <Sidebar.Item href="#" icon={HiInbox}>
+          <Sidebar.Item href="#" icon={FiFolder}>
             <Link to="/fileExplorer">File Explorer </Link>
           </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiShoppingCart}>
+          <Sidebar.Item href="#" icon={FiShoppingCart}>
             <Link to="/pagination">Products Pagination </Link>
+          </Sidebar.Item>
+          <Sidebar.Item href="#" icon={FiSearch}>
+            <Link to="/multiSelectSearch">Multi Select Search </Link>
           </Sidebar.Item>
         </Sidebar.ItemGroup>
       </Sidebar.Items>

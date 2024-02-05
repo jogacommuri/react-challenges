@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import SidebarMenu from './components/SidebarMenu';
 import { Spinner } from 'flowbite-react';
 import { Link } from "react-router-dom";
+import MultiSelectSearch from './components/MultiSelectSearch';
 
 const Home = lazy(() => import('./components/Home'));
 const FileExplorer = lazy(() => import('./components/FileExplorer'))
@@ -22,12 +23,13 @@ export function App() {
     <div className="flex min-h-max">
       
       <SidebarMenu/>
-      <div className="flex-grow-1 p-5 h-100">
+      <div className="flex-grow-1 p-5 w-full ">
         <Suspense fallback={<div className='container'><Spinner color="purple" aria-label="Loading ..." /></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/fileExplorer" element={<FileExplorer />} />
             <Route path="/pagination" element={<Pagination />} />
+            <Route path="/multiSelectSearch" element={<MultiSelectSearch />} />
           </Routes>
         </Suspense>
       </div>
