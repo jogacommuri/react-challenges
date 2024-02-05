@@ -1,0 +1,8 @@
+/* Your styles goes here. */
+.app-container {
+    display: flex;
+  }
+  
+  .main-content {
+    flex-grow: 1; /* This will make the main content take up the remaining space */
+  }
