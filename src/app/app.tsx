@@ -7,7 +7,7 @@ import { Spinner } from 'flowbite-react';
 import { Link } from "react-router-dom";
 
 const Home = lazy(() => import('./components/Home'));
-const FileExplorer = lazy(() => import('./components/fileExplorer'))
+const FileExplorer = lazy(() => import('./components/FileExplorer'))
 
 const Pagination = lazy(() => import('./components/Pagination'))
 export function App() {
