@@ -2,8 +2,94 @@
 @tailwind components;
 @tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
+[data-theme = "light"]{
+  --bg-color: #ffffff;
+  --text-color: #333 !important;
+  --heading-color: #333;
+}
+[data-theme = "dark"]{
+  --bg-color: #333;
+  --text-color: #fff !important;
+  --heading-color: lime;
+}
 @layer base {
     html {
       font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
     }
+    body{
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      
+    }
+  }
+
+  form-container {
+    background-color: #fff;
+    color: #000;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+  
+  .form-element {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    margin-bottom: 5px;
+  }
+  
+  .input {
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+    margin-bottom: 2px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+      rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  }
+  
+  .input::placeholder {
+    color: #cbd5e1;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .button {
+    margin-top: 20px;
+    background: none;
+    color: #000;
+    border: 2px solid #475569;
+    border-radius: 4px;
+    width: 40%;
+    align-self: center;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 5px 5px 0px 0px #475569;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+  
+  .error {
+    color: #dc2626;
+  }
+  
+  .success {
+    margin-top: 10px;
+    text-align: center;
+    color: #22c55e;
   }
