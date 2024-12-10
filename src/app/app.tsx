@@ -20,7 +20,16 @@ const Form = lazy(() => import('./components/Form'))
 
 const Debounce = lazy(() => import('./components/Debounce'))
 
-const CartCalculator = lazy(()=> import('./components/CartCalculator'))
+const MemoryGame = lazy(()=> import('./components/MemoryGame'))
+
+const TodoApp = lazy(() => import('./components/TodoApp'))
+const KanbanBoard = lazy(() => import('./components/KanbanBoard'));
+const DragDrop = lazy(()=> import('./components/DragDrop'));
+const TicTacToe = lazy(()=> import('./components/TicTacToe'));
+
+const EarnestTradeline = lazy(()=> import('./components/EarnestTradeline'));
+const DataTable = lazy(()=> import('./components/DataTable'));
+const GridPuzzle = lazy(()=> import('./components/GridPuzzle'));
 export function App() {
   
   return (
@@ -39,8 +48,14 @@ export function App() {
             <Route path="/polyfill-useEffect" element={<PolyfillUseEffect />} />
             <Route path="/form-validation" element={<Form/>} />
             <Route path="/debounce" element={<Debounce/>} />
-            <Route path="/cartCalculator" element={<CartCalculator />} />
-            
+            <Route path="/memoryGame" element={<MemoryGame />} />
+            <Route path="/todoApp" element={<TodoApp />} />
+            <Route path='/kanban' element={<KanbanBoard/>} />
+            <Route path='/dragDrop' element={<DragDrop />} />
+            <Route path='/tictactoe' element={<TicTacToe />} />
+            <Route path='/tradeline' element={<EarnestTradeline />} />
+            <Route path='/dataTable' element={<DataTable />} />
+            <Route path='/gridPuzzle' element={<GridPuzzle n={5} />} />
           </Routes>
         </Suspense>
       </div>
